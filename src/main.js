@@ -43,6 +43,12 @@ function setupkeyboardListener(){
     keysDown[event.key] = true;
     console.log(keysDown);
   });
+  document.addEventListener("keyup", function (event){
+    delete keysDown[event.key];
+    if (event.key == " "){
+
+    }
+  });
 }
 
 function update(){
